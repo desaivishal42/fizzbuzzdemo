@@ -9,10 +9,17 @@ public class FizzBuzzService {
         if(isNumberDivisibleBy3(num)){
             return "Fizz";
         }
+        if(isNumberDivisibleBy5(num)){
+            return "Buzz";
+        }
         return String.valueOf(num);
     }
 
     private boolean isNumberDivisibleBy3(int num) {
         return num % 3 == 0;
+    }
+
+    private boolean isNumberDivisibleBy5(int num) {
+        return num % 5 == 0;
     }
 }

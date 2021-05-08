@@ -31,4 +31,14 @@ public class FizzBuzzServiceTest {
         //then
         Assert.assertEquals("Fizz", output);
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 20, 25})
+    public void ShouldReturnBuzzIfNumberDivisibleBy5(int number) {
+        //when
+        var output = fizzBuzzService.evaluateNumber(number);
+
+        //then
+        Assert.assertEquals("Buzz", output);
+    }
 }
