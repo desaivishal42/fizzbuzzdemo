@@ -21,4 +21,14 @@ public class FizzBuzzServiceTest {
         //then
         Assert.assertEquals(String.valueOf(number), output);
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 9, 33})
+    public void ShouldReturnFizzIfNumberDivisibleBy3(int number) {
+        //when
+        var output = fizzBuzzService.evaluateNumber(number);
+
+        //then
+        Assert.assertEquals("Fizz", output);
+    }
 }
